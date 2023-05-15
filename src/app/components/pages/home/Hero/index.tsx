@@ -1,13 +1,52 @@
-import { TechBadge } from '@/app/components/TechBadge'
+'use client'
 import Image from 'next/image'
+import { Button } from '@/app/components/Button'
 
+import { TechBadge } from '@/app/components/TechBadge'
+import {
+  GithubLogo,
+  InstagramLogo,
+  WhatsappLogo,
+  DiscordLogo,
+  TwitterLogo,
+} from 'phosphor-react'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import Link from 'next/link'
 export function Hero() {
   const TECHS = ['NEXTJS', 'REACT', 'TAILWINDCSS', 'STYLED-COMPONENTS']
+
+  const CONTACTS = [
+    {
+      url: 'https://github.com/markus90souza',
+      icon: <GithubLogo size={24} />,
+    },
+
+    {
+      url: 'https://github.com/markus90souza',
+      icon: <InstagramLogo size={24} />,
+    },
+
+    {
+      url: 'https://github.com/markus90souza',
+      icon: <WhatsappLogo size={24} />,
+    },
+
+    {
+      url: 'https://github.com/markus90souza',
+      icon: <DiscordLogo size={24} />,
+    },
+
+    {
+      url: 'https://github.com/markus90souza',
+      icon: <TwitterLogo size={24} />,
+    },
+  ]
+
   return (
     <section
       className={`
         w-full 
-        h-[755px]
+        lg:h-[755px]
         bg-cover
         bg-no-repeat
         bg-center bg-hero-image 
@@ -33,7 +72,24 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="">contato</div>
+          <div className="flex items-center mt-6 lg:mt-10 flex-col sm:flex-row sm:gap-5">
+            <Button className="w-max shadow-button">
+              Entre em contato <HiArrowNarrowRight size={18} />
+            </Button>
+
+            <div className="flex items-center text-2xl h-20 gap-2 text-gray-600">
+              {CONTACTS.map((contact) => (
+                <Link
+                  key={contact.url}
+                  href={contact.url}
+                  target="_blank"
+                  className="hover:text-emerald-400 transition-colors"
+                >
+                  {contact.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
 
         <Image
@@ -41,6 +97,7 @@ export function Hero() {
           width={420}
           height={404}
           alt=""
+          className="mb-6 w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] lg:mb-0 shadow-2xl rounded-lg object-cover"
         />
       </div>
     </section>
