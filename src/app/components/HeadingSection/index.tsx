@@ -15,7 +15,7 @@ export function HeadingSection({
     <div className={cn('flex flex-col gap-4', className)}>
       <span
         className={cn('font-mono text-sm text-emerald-400')}
-      >{`.../${subtitle}`}</span>
+      >{`# ${subtitle}`}</span>
       <h3 className={cn('text-3xl font-medium')}>{title}</h3>
     </div>
   )

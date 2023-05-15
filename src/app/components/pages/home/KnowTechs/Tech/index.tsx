@@ -1,4 +1,4 @@
-import { getRelativeTimeString } from '@/utils/get-relative-time'
+import { getRelativeTimeString } from '@/app/utils/get-relative-time'
 import { ReactNode } from 'react'
 
 type TechProps = {
@@ -14,6 +14,7 @@ export function Tech({ tech }: TechProps) {
     new Date(tech.startDate),
     'pt-BR',
   ).replace('há', '')
+
   return (
     <div className="flex flex-col gap-2 bg-gray-600/20 text-gray-500 p-6 rounded-lg hover:text-emerald-500 hover:bg-gray-600/30 transition-all">
       <div className="">
@@ -21,7 +22,7 @@ export function Tech({ tech }: TechProps) {
           <p className="font-medium">{tech.name}</p>
           {tech.icon}
         </div>
-        <span>{relativeTime} de Experiência</span>
+        <span>{relativeTime} de experiência</span>
       </div>
     </div>
   )
