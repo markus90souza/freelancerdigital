@@ -1,6 +1,8 @@
+import { TechBadge } from '@/app/components/TechBadge'
 import Image from 'next/image'
 
 export function Hero() {
+  const TECHS = ['NEXTJS', 'REACT', 'TAILWINDCSS', 'STYLED-COMPONENTS']
   return (
     <section
       className={`
@@ -25,7 +27,12 @@ export function Hero() {
             sint! Quod?
           </p>
 
-          <div className="">techs</div>
+          <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[320px]">
+            {TECHS.map((techs) => (
+              <TechBadge name={techs} key={techs} />
+            ))}
+          </div>
+
           <div className="">contato</div>
         </div>
 
