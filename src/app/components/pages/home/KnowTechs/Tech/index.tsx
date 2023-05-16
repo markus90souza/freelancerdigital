@@ -16,7 +16,7 @@ export function Tech({ tech }: TechProps) {
   ).replace('há', '')
 
   return (
-    <div className="flex flex-col gap-2 bg-gray-600/20 text-gray-500 p-6 rounded-lg hover:text-emerald-500 hover:bg-gray-600/30 transition-all">
+    <div className="flex flex-col gap-2 rounded-lg bg-gray-600/20 p-6 text-gray-500 transition-all hover:bg-gray-600/30 hover:text-emerald-500">
       <div className="">
         <div className="flex items-center justify-between">
           <p className="font-medium">{tech.name}</p>

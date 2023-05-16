@@ -5,7 +5,7 @@ import Image from 'next/image'
 export function Experience() {
   return (
     <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
-      <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col items-center gap-4">
         <div className="rounded-full border border-gray-500 p-0.5">
           <Image
             src={'https://media.graphassets.com/Q4lS2mPkT4Kw3BHM6Ba5'}
@@ -38,11 +38,11 @@ export function Experience() {
           </p>
         </div>
 
-        <p className="font-semibold text-sm text-gray-400 mt-6 mb-3">
+        <p className="mb-3 mt-6 text-sm font-semibold text-gray-400">
           Competencias
         </p>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-4 lg:max-w-[350px] mb-8">
+        <div className="mb-8 flex flex-wrap gap-x-3 gap-y-4 lg:max-w-[350px]">
           {Array.from({ length: 6 }).map((_, index) => (
             <TechBadge key={index} name="Teste" />
           ))}

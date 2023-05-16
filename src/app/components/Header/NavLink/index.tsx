@@ -15,7 +15,7 @@ export const NavLink = ({ href, label }: NavLinkProps) => {
     <Link
       href={href}
       className={cn(
-        'flex items-center gap-2 text-gray-400 font-mono font-medium',
+        'flex items-center gap-2 font-mono font-medium text-gray-400',
         is_active && 'text-emerald-500',
       )}
     >

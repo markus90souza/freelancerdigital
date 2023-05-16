@@ -45,21 +45,21 @@ export function Hero() {
   return (
     <section
       className={`
-        w-full 
-        lg:h-[755px]
-        bg-cover
-        bg-no-repeat
-        bg-center bg-hero-image 
-        flex flex-col justify-end pb-10
-        sm:pb-32 py-32 lg:py=[110px]
+        lg:py=[110px] 
+        flex
+        w-full
+        flex-col
+        justify-end bg-hero-image 
+        bg-cover bg-center bg-no-repeat py-32
+        pb-10 sm:pb-32 lg:h-[755px]
       `}
     >
-      <div className="container flex items-start justify-between flex-col-reverse gap-4 lg:flex-row">
+      <div className="container flex flex-col-reverse items-start justify-between gap-4 lg:flex-row">
         <div className="w-full lg:max-w-[530px]">
-          <p className="text-emerald-400 font-mono">olá meu nome é </p>
-          <h2 className="text-4xl mt-2 font-medium">Marcos de Souza</h2>
+          <p className="font-mono text-emerald-400">olá meu nome é </p>
+          <h2 className="mt-2 text-4xl font-medium">Marcos de Souza</h2>
 
-          <p className="text-sm my-6 text-gray-400 sm:text-base">
+          <p className="my-6 text-sm text-gray-400 sm:text-base">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
             numquam culpa nesciunt ab illo porro veniam? Repudiandae magni nobis
             sequi nostrum, saepe iste, repellendus sapiente cumque quia alias
@@ -72,18 +72,18 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="flex items-center mt-6 lg:mt-10 flex-col sm:flex-row sm:gap-5">
+          <div className="mt-6 flex flex-col items-center sm:flex-row sm:gap-5 lg:mt-10">
             <Button className="w-max shadow-button">
               Entre em contato <HiArrowNarrowRight size={18} />
             </Button>
 
-            <div className="flex items-center text-2xl h-20 gap-2 text-gray-600">
+            <div className="flex h-20 items-center gap-2 text-2xl text-gray-600">
               {CONTACTS.map((contact) => (
                 <Link
                   key={contact.url}
                   href={contact.url}
                   target="_blank"
-                  className="hover:text-emerald-400 transition-colors"
+                  className="transition-colors hover:text-emerald-400"
                 >
                   {contact.icon}
                 </Link>
@@ -97,7 +97,7 @@ export function Hero() {
           width={420}
           height={404}
           alt=""
-          className="mb-6 w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] lg:mb-0 shadow-2xl rounded-lg object-cover"
+          className="mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
         />
       </div>
     </section>
