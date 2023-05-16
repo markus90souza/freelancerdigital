@@ -1,7 +1,9 @@
+import { ProjectDetails } from '../components/pages/projects/ProjectDetails'
+
 export default function Projects() {
   return (
     <>
-      <h1>Projects</h1>
+      <ProjectDetails />
     </>
   )
 }

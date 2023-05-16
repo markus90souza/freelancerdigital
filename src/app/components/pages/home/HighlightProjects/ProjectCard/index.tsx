@@ -39,7 +39,7 @@ export function ProjectCard({}: ProjectCardProps) {
           ))}
         </div>
 
-        <Link href={'/projetos/bookwise'}>
+        <Link href={'/projects/bookwise'}>
           Ver Projeto <ArrowRight />
         </Link>
       </div>
