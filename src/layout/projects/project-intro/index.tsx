@@ -1,5 +1,5 @@
-import { HeadingSection } from '@/components/HeadingSection'
-import { Link } from '@/components/Link'
+import { HeadingSection } from '@/components/heading-section'
+import { Link } from '@/components/link'
 import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 export function ProjectIntro() {

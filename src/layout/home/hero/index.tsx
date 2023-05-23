@@ -10,8 +10,9 @@ import {
 } from 'phosphor-react'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import Link from 'next/link'
-import { TechBadge } from '@/components/TechBadge'
-import { Button } from '@/components/Button'
+import { TechBadge } from '@/components/tech-badge'
+import { Button } from '@/components/button'
+
 export function Hero() {
   const CONTACTS = [
     {
@@ -42,15 +43,9 @@ export function Hero() {
 
   return (
     <section
-      className={`
-        lg:py=[110px] 
-        flex
-        w-full
-        flex-col
-        justify-end bg-hero-image 
-        bg-cover bg-center bg-no-repeat py-32
-        pb-10 sm:pb-32 lg:h-[755px]
-      `}
+      className={
+        'lg:py=[110px] flex w-full flex-col justify-end bg-hero-image bg-cover bg-center bg-no-repeat py-32 pb-10 sm:pb-32 lg:h-[755px]'
+      }
     >
       <div className="container flex flex-col-reverse items-start justify-between gap-4 lg:flex-row">
         <div className="w-full lg:max-w-[530px]">
@@ -77,7 +72,7 @@ export function Hero() {
             </Button>
 
             <div className="flex h-20 items-center gap-2 text-2xl text-gray-600">
-              {/* {CONTACTS.map((contact) => (
+              {CONTACTS.map((contact) => (
                 <Link
                   key={contact.url}
                   href={contact.url}
@@ -86,7 +81,7 @@ export function Hero() {
                 >
                   {contact.icon}
                 </Link>
-              ))} */}
+              ))}
             </div>
           </div>
         </div>

@@ -2,9 +2,9 @@ import './globals.css'
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import { ReactNode } from 'react'
 
-import { Footer } from '@/components/Footer'
-import { ContactForm } from '@/components/ContactForm'
-import { Header } from '@/components/Header'
+import { Footer } from '@/components/footer'
+import { ContactForm } from '@/components/forms/contact'
+import { Header } from '@/components/header'
 
 const inter = Inter({
   variable: '--font-inter',

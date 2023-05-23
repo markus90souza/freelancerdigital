@@ -1,14 +1,11 @@
 'use client'
 
-import { Link } from '@/components/Link'
-import { TechBadge } from '@/components/TechBadge'
+import { Link } from '@/components/link'
+import { TechBadge } from '@/components/tech-badge'
 import Image from 'next/image'
-import { ArrowArcRight, ArrowRight, ArrowUDownRight } from 'phosphor-react'
+import { ArrowRight } from 'phosphor-react'
 
-interface ProjectCardProps {}
-
-// eslint-disable-next-line no-empty-pattern
-export function ProjectCard({}: ProjectCardProps) {
+export function ProjectCard() {
   return (
     <div className="flex flex-col gap-6 md:flex-row md:gap-12 ">
       <div className="h-full w-full">

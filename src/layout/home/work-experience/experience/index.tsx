@@ -1,6 +1,6 @@
-import { Link } from '@/components/Link'
-import { TechBadge } from '@/components/TechBadge'
 import Image from 'next/image'
+import { Link } from '@/components/link'
+import { TechBadge } from '@/components/tech-badge'
 
 export function Experience() {
   return (

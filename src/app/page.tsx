@@ -1,4 +1,4 @@
-import { BackToTop } from '@/components/BackToTop'
+import { BackToTop } from '@/components/back-to-top'
 import { Hero } from '@/layout/home/hero'
 import { HighlightProjects } from '@/layout/home/highlight-projects'
 import { KnowTechs } from '@/layout/home/know-techs'

@@ -1,4 +1,4 @@
-import { HeadingSection } from '@/components/HeadingSection'
+import { HeadingSection } from '@/components/heading-section'
 import { Experience } from './experience'
 
 export function WorkExperience() {

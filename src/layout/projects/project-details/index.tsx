@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from '@/components/Button'
-import { HeadingSection } from '@/components/HeadingSection'
-import { Link } from '@/components/Link'
-import { TechBadge } from '@/components/TechBadge'
+import { Button } from '@/components/button'
+import { HeadingSection } from '@/components/heading-section'
+import { Link } from '@/components/link'
+import { TechBadge } from '@/components/tech-badge'
 import { ArrowLeft, GithubLogo } from 'phosphor-react'
 
 export function ProjectDetails() {
