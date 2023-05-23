@@ -41,6 +41,14 @@ export function Hero() {
     },
   ]
 
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contact')
+
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section
       className={
@@ -67,7 +75,7 @@ export function Hero() {
           </div>
 
           <div className="mt-6 flex flex-col items-center sm:flex-row sm:gap-5 lg:mt-10">
-            <Button className="w-max shadow-button">
+            <Button className="w-max shadow-button" onClick={handleContact}>
               Entre em contato <HiArrowNarrowRight size={18} />
             </Button>
 

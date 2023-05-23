@@ -8,7 +8,7 @@ import { ArrowLeft, GithubLogo } from 'phosphor-react'
 
 export function ProjectDetails() {
   return (
-    <section className="px6 relative flex w-full flex-col items-center justify-end overflow-hidden py-24 pb-10 sm:min-h-[755px] sm:pb-24 ">
+    <section className="relative flex w-full flex-col items-center justify-end overflow-hidden px-6 py-24 pb-10 sm:min-h-[750px] sm:pb-24 ">
       <div
         className="absolute inset-0 z-[-1]"
         style={{
