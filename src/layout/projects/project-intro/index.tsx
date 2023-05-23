@@ -1,0 +1,29 @@
+import { HeadingSection } from '@/components/HeadingSection'
+import { Link } from '@/components/Link'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
+
+export function ProjectIntro() {
+  return (
+    <section className="flex h-[450px] w-full flex-col items-center justify-center bg-hero-image bg-cover bg-center bg-no-repeat px-2 lg:h-[630px] ">
+      <HeadingSection
+        subtitle="Projetos"
+        title="Meus Projetos"
+        className="items-center text-center sm:[&>h3]:text-4xl"
+      />
+
+      <div className="flex flex-col items-center">
+        <p className="my-4 max-w-[640px] text-center text-sm text-gray-400 sm:my-6 sm:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quam
+          cupiditate enim debitis architecto blanditiis sed et iure
+          reprehenderit vitae, odit officia inventore ullam doloremque aperiam
+          quos aut, atque quisquam?
+        </p>
+
+        <Link href={'/'}>
+          <HiArrowNarrowLeft size={20} />
+          Voltar para a Home
+        </Link>
+      </div>
+    </section>
+  )
+}

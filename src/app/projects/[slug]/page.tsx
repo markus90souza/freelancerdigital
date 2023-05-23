@@ -1,11 +1,9 @@
-import { ProjectDetails } from '@/app/components/pages/projects/ProjectDetails'
-import { ProjectSection } from '@/app/components/pages/projects/ProjectSection'
+import { ProjectDetails } from '@/layout/projects/project-details'
 
 export default function Project() {
   return (
     <>
       <ProjectDetails />
-      <ProjectSection />
     </>
   )
 }

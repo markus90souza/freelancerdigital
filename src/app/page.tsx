@@ -1,8 +1,8 @@
-import { BackToTop } from './components/BackToTop'
-import { Hero } from './components/pages/home/Hero'
-import { HighlightProjects } from './components/pages/home/HighlightProjects'
-import { KnowTechs } from './components/pages/home/KnowTechs'
-import { WorkExperience } from './components/pages/home/WorkExperience'
+import { BackToTop } from '@/components/BackToTop'
+import { Hero } from '@/layout/home/hero'
+import { HighlightProjects } from '@/layout/home/highlight-projects'
+import { KnowTechs } from '@/layout/home/know-techs'
+import { WorkExperience } from '@/layout/home/work-experience'
 
 export default function Home() {
   return (

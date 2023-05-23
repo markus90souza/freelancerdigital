@@ -1,9 +1,9 @@
-import { ProjectDetails } from '../components/pages/projects/ProjectDetails'
+import { ProjectIntro } from '@/layout/projects/project-intro'
 
 export default function Projects() {
   return (
     <>
-      <ProjectDetails />
+      <ProjectIntro />
     </>
   )
 }
