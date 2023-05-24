@@ -12,35 +12,15 @@ import { HiArrowNarrowRight } from 'react-icons/hi'
 import Link from 'next/link'
 import { TechBadge } from '@/components/tech-badge'
 import { Button } from '@/components/button'
+import { HomePageInfo } from '@/types/page'
+import { RichText } from '@/components/rich-text'
+import { CMSIcon } from '@/components/cms-icon'
 
-export function Hero() {
-  const CONTACTS = [
-    {
-      url: 'https://github.com/markus90souza',
-      icon: <GithubLogo size={24} />,
-    },
+type HeroProps = {
+  data: HomePageInfo
+}
 
-    {
-      url: 'https://github.com/markus90souza',
-      icon: <InstagramLogo size={24} />,
-    },
-
-    {
-      url: 'https://github.com/markus90souza',
-      icon: <WhatsappLogo size={24} />,
-    },
-
-    {
-      url: 'https://github.com/markus90souza',
-      icon: <DiscordLogo size={24} />,
-    },
-
-    {
-      url: 'https://github.com/markus90souza',
-      icon: <TwitterLogo size={24} />,
-    },
-  ]
-
+export function Hero({ data }: HeroProps) {
   const handleContact = () => {
     const contactSection = document.querySelector('#contact')
 
@@ -60,18 +40,14 @@ export function Hero() {
           <p className="font-mono text-emerald-400">olá meu nome é </p>
           <h2 className="mt-2 text-4xl font-medium">Marcos de Souza</h2>
 
-          <p className="my-6 text-sm text-gray-400 sm:text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
-            numquam culpa nesciunt ab illo porro veniam? Repudiandae magni nobis
-            sequi nostrum, saepe iste, repellendus sapiente cumque quia alias
-            sint! Quod?
-          </p>
+          <div className="my-6 text-sm text-gray-400 sm:text-base">
+            <RichText content={data.introduction.raw} />
+          </div>
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[320px]">
-            <TechBadge name={'STYLED-COMPONENTS'} />
-            <TechBadge name={'TAILWINDCSS'} />
-            <TechBadge name={'REACTJS'} />
-            <TechBadge name={'NEXTJS'} />
+            {data.technologies.map((tech, index) => (
+              <TechBadge name={tech.name} key={`${tech.name}-${index}`} />
+            ))}
           </div>
 
           <div className="mt-6 flex flex-col items-center sm:flex-row sm:gap-5 lg:mt-10">
@@ -80,14 +56,15 @@ export function Hero() {
             </Button>
 
             <div className="flex h-20 items-center gap-2 text-2xl text-gray-600">
-              {CONTACTS.map((contact) => (
+              {data.socials.map((contact, index) => (
                 <Link
-                  key={contact.url}
+                  key={index}
                   href={contact.url}
                   target="_blank"
                   className="transition-colors hover:text-emerald-400"
                 >
-                  {contact.icon}
+                  <CMSIcon icon={contact.icon} />
+                  {contact.name}
                 </Link>
               ))}
             </div>
@@ -95,7 +72,7 @@ export function Hero() {
         </div>
 
         <Image
-          src={'/images/profile-pic.png'}
+          src={data.profile_picture.url}
           width={420}
           height={404}
           alt=""
