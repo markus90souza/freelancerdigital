@@ -1,24 +1,29 @@
 'use client'
 
-import { ProjectCard } from './project-card'
+import { HighlightCard } from './highlight-card'
 
 import { ArrowRight } from 'phosphor-react'
 import { Link } from '@/components/link'
 import { HeadingSection } from '@/components/heading-section'
 import { HorizantalDivider } from '@/components/divider/HorizantalDivider'
+import { Project } from '@/types/projects'
 
-export const HighlightProjects = () => {
+type HighlightProjectsProps = {
+  projects: Project[]
+}
+
+export const HighlightProjects = ({ projects }: HighlightProjectsProps) => {
   return (
     <section className="container py-16">
       <HeadingSection title="Projetos em destaque" subtitle="Destaques" />
       <HorizantalDivider className="mb-16" />
 
       <div>
-        {Array.from({ length: 4 }).map((_, index) => (
-          <>
-            <ProjectCard key={index} />
-            <HorizantalDivider key={index} className="my-16" />
-          </>
+        {projects.map((project, i) => (
+          <div key={i}>
+            <HighlightCard project={project} />
+            <HorizantalDivider className="my-16" />
+          </div>
         ))}
 
         <p className="flex items-center gap-1.5">

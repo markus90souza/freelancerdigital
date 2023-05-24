@@ -24,10 +24,21 @@ const getPageData = async (): Promise<HomePageData> => {
             url
             icon
           }
-          know_techs {
+          known_techs {
             icon
             name
             start_date
+          }
+          highlight_projects {
+            slug
+            thumbnail {
+              url
+            }
+            title
+            short_description
+            technologies {
+              name
+            }
           }
         }
       }
@@ -48,7 +59,7 @@ const Home = async () => {
     <>
       <Hero data={pageData} />
       {/* <KnownTechs techs={pageData.technologies} /> */}
-      <HighlightProjects />
+      <HighlightProjects projects={pageData.highlight_projects} />
       <WorkExperience />
       <BackToTop />
     </>
