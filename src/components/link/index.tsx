@@ -1,6 +1,6 @@
-import { cn } from '@/libs/utils'
 import NextLink from 'next/link'
 import { ComponentProps } from 'react'
+import { cn } from '@/libs/utils'
 
 type LinkProps = ComponentProps<typeof NextLink>
 
