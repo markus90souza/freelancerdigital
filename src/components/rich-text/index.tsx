@@ -19,7 +19,7 @@ export function RichText({ ...rest }: RichTextProps) {
           </ul>
         ),
 
-        ul: ({ children, ...rest }) => (
+        a: ({ children, ...rest }) => (
           <a
             className="underline transition-colors hover:text-emerald-500"
             {...rest}
