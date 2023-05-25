@@ -1,9 +1,9 @@
 import { CMSIcon } from '@/components/cms-icon'
-import { KnownTech } from '@/types/projects'
+import { Technology } from '@/types/projects'
 import { getRelativeTimeString } from '@/utils/get-relative-time'
 
 type TechProps = {
-  tech: KnownTech
+  tech: Technology
 }
 
 export function Tech({ tech }: TechProps) {

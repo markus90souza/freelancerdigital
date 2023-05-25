@@ -12,6 +12,21 @@ export function RichText({ ...rest }: RichTextProps) {
         bold: ({ children }) => (
           <b className="font-medium text-gray-50">{children}</b>
         ),
+
+        ul: ({ children }) => (
+          <ul className="flex list-inside list-disc flex-col gap-1 pl-2">
+            {children}
+          </ul>
+        ),
+
+        ul: ({ children, ...rest }) => (
+          <a
+            className="underline transition-colors hover:text-emerald-500"
+            {...rest}
+          >
+            {children}
+          </a>
+        ),
       }}
     />
   )

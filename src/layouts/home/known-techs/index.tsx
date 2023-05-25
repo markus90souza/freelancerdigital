@@ -1,10 +1,10 @@
 import { HeadingSection } from '@/components/heading-section'
 import { Tech } from './tech'
 
-import { KnownTech } from '@/types/projects'
+import { Technology } from '@/types/projects'
 
 type KnownTechProps = {
-  techs: KnownTech[]
+  techs: Technology[]
 }
 
 export function KnownTechs({ techs }: KnownTechProps) {

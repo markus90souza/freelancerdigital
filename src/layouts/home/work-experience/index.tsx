@@ -1,12 +1,17 @@
 import { HeadingSection } from '@/components/heading-section'
 import { Experience } from './experience'
+import { WorkExperience as IWorkExperience } from '@/types/work-experiences'
 
-export function WorkExperience() {
+type WorkExperienceProps = {
+  experiences: IWorkExperience[]
+}
+
+export function WorkExperience({ experiences }: WorkExperienceProps) {
   return (
     <section className="container flex flex-col gap-10 py-16 md:flex-row md:gap-4 lg:gap-10">
       <div className="max-w-[420px]">
         <HeadingSection
-          title="Experiência Profissinal"
+          title="Experiência Profissional | Freelancers"
           subtitle="Experiências"
         />
 
@@ -19,9 +24,9 @@ export function WorkExperience() {
       </div>
 
       <div className="flex flex-col gap-4">
-        <Experience />
-        <Experience />
-        <Experience />
+        {experiences.map((experience, index) => (
+          <Experience key={experience.id} data={experience} />
+        ))}
       </div>
     </section>
   )

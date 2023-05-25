@@ -1,6 +1,6 @@
 import type { RichTextContent } from '@graphcms/rich-text-types'
 
-export type KnownTech = {
+export type Technology = {
   icon: string
   name: string
   start_date: string
@@ -27,7 +27,7 @@ export type Project = {
     raw: RichTextContent
   }
 
-  technologies: KnownTech[]
+  technologies: Technology[]
 
   sections: SectionProps[]
 
