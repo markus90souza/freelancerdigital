@@ -11,7 +11,7 @@ type KnownTechProps = {
 
 export function KnownTechs({ techs }: KnownTechProps) {
   return (
-    <section className="container py-16">
+    <section className="container w-full bg-gray-900 py-16">
       <HeadingSection title="Conhecimentos" subtitle="Competências" />
 
       <div className="mt-[60px] grid grid-cols-[repeat(auto-fit,minmax(264px,1fr))] gap-3">

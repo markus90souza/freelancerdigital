@@ -5,6 +5,7 @@ import { ReactNode } from 'react'
 import { Footer } from '@/components/footer'
 import { ContactForm } from '@/components/forms/contact'
 import { Header } from '@/components/header'
+import { CrispChat } from '@/components/crisp-chat'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -25,6 +26,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         <ContactForm />
         <Footer />
+
+        <CrispChat />
       </body>
     </html>
   )

@@ -8,8 +8,8 @@ type WorkExperienceProps = {
 
 export function WorkExperience({ experiences }: WorkExperienceProps) {
   return (
-    <section className="container flex flex-col gap-10 py-16 md:flex-row md:gap-4 lg:gap-10">
-      <div className="max-w-[420px]">
+    <section className="container flex min-h-screen flex-col gap-10 py-16 md:flex-row md:gap-4 lg:gap-10">
+      <div className="sticky top-5 h-screen max-w-[420px]">
         <HeadingSection
           title="Experiência Profissional | Freelancers"
           subtitle="Experiências"
@@ -25,7 +25,13 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
 
       <div className="flex flex-col gap-4">
         {experiences.map((experience, index) => (
-          <Experience key={experience.id} data={experience} />
+          <>
+            <Experience key={experience.id} data={experience} />
+            <Experience key={experience.id} data={experience} />
+            <Experience key={experience.id} data={experience} />
+            <Experience key={experience.id} data={experience} />
+            <Experience key={experience.id} data={experience} />
+          </>
         ))}
       </div>
     </section>

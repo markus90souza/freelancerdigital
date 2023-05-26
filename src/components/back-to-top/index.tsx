@@ -25,14 +25,14 @@ export const BackToTop = () => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed bottom-4 right-4 z-20"
+          className="fixed bottom-24 right-4 z-20"
           initial={{ opacity: 0, right: -10 }}
           animate={{ opacity: 1, right: 16 }}
           exit={{ opacity: 0, right: -10 }}
         >
           <Button
             onClick={scrollToTop}
-            className="h-12 w-12 rounded-full shadow-lg shadow-emerald-400/20"
+            className="h-12 w-12 rounded-full shadow-md shadow-emerald-400/20"
           >
             <TbArrowNarrowUp size={20} />
           </Button>
