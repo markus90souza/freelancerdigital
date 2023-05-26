@@ -1,5 +1,6 @@
 import { ProjectDetails } from '@/layouts/projects/project-details'
 import { ProjectSections } from '@/layouts/projects/project-section'
+import { ProjectPageData } from '@/types/page'
 import { fetchHygraphQuery } from '@/utils/fetch-hygraph-query'
 
 type ProjectProps = {
@@ -8,17 +9,18 @@ type ProjectProps = {
   }
 }
 
-const getProjectDetails = async (slug: string): Promise<any> => {
+const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   const query = `
   query ProjectQuery() {
     project(where: {slug: "${slug}"}) {
+      id
       page_background {
         url
       }
       thumbnail {
         url
       }
-      sections {
+      section {
         title
         image {
           url
@@ -47,13 +49,13 @@ const getProjectDetails = async (slug: string): Promise<any> => {
 }
 
 export default async function Project({ params: { slug } }: ProjectProps) {
-  const response = await getProjectDetails(slug)
+  console.log(slug)
+  const { project } = await getProjectDetails(slug)
 
-  console.log(response)
   return (
     <>
-      <ProjectDetails />
-      <ProjectSections />
+      <ProjectDetails project={project} />
+      <ProjectSections sections={project.section} />
     </>
   )
 }

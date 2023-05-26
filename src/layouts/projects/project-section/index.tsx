@@ -1,25 +1,14 @@
+import { SectionProps } from '@/types/projects'
 import Image from 'next/image'
 
-export function ProjectSections() {
-  const section = [
-    {
-      title: 'Image 1',
-      image: 'https://media.graphassets.com/EC5gBJVTSuuJ74UXgmd8',
-    },
+type ProjectSectionsProps = {
+  sections: SectionProps[]
+}
 
-    {
-      title: 'Image 2',
-      image: 'https://media.graphassets.com/EC5gBJVTSuuJ74UXgmd8',
-    },
-
-    {
-      title: 'Image 3',
-      image: 'https://media.graphassets.com/EC5gBJVTSuuJ74UXgmd8',
-    },
-  ]
+export function ProjectSections({ sections }: ProjectSectionsProps) {
   return (
     <section className="container my-12 flex flex-col gap-8 sm:my-32 sm:gap-32">
-      {section.map((section) => (
+      {sections.map((section) => (
         <div
           key={'jfdopjqsopjfo'}
           className="flex flex-col items-center gap-6 sm:gap-12"
@@ -29,7 +18,7 @@ export function ProjectSections() {
           </h2>
 
           <Image
-            src={section.image}
+            src={section.image.url}
             alt=""
             width={1080}
             height={672}

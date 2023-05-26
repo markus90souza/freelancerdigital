@@ -14,8 +14,13 @@ export type SectionProps = {
 }
 
 export type Project = {
+  id: string
   slug: string
   thumbnail: {
+    url: string
+  }
+
+  page_background: {
     url: string
   }
 
@@ -29,7 +34,7 @@ export type Project = {
 
   technologies: Technology[]
 
-  sections: SectionProps[]
+  section: SectionProps[]
 
   github_url: string
   website_url: string

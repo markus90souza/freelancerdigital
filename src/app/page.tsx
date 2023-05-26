@@ -24,6 +24,7 @@ const getPageData = async (): Promise<HomePageData> => {
             icon
           }
           known_techs {
+            id
             icon
             name
             start_date
@@ -70,11 +71,10 @@ const getPageData = async (): Promise<HomePageData> => {
 const Home = async () => {
   const { page: pageData, workExperiences } = await getPageData()
 
-  console.log(workExperiences)
   return (
     <>
       <Hero data={pageData} />
-      {/* <KnownTechs techs={pageData.technologies} /> */}
+      <KnownTechs techs={pageData.known_techs} />
       <HighlightProjects projects={pageData.highlight_projects} />
       <WorkExperience experiences={workExperiences} />
       <BackToTop />

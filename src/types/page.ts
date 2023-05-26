@@ -14,16 +14,25 @@ export type HomePageInfo = {
     url: string
   }
 
+  known_techs: Technology[]
+
   socials: Social[]
 
   highlight_projects: Project[]
 }
 
+// PAGE HOME
 export type HomePageData = {
   page: HomePageInfo
   workExperiences: WorkExperience[]
 }
 
+// PAGE PROJECTS
 export type ProjectsPageData = {
   projects: Project[]
+}
+
+// PAGE PROJECT DETAILS
+export type ProjectPageData = {
+  project: Project
 }
