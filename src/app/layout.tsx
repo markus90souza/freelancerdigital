@@ -7,6 +7,8 @@ import { ContactForm } from '@/components/forms/contact'
 import { Header } from '@/components/header'
 import { CrispChat } from '@/components/crisp-chat'
 
+import { Analytics } from '@vercel/analytics/react'
+
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
@@ -26,7 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         <ContactForm />
         <Footer />
-
+        <Analytics />
         <CrispChat />
       </body>
     </html>
