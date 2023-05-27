@@ -25,13 +25,7 @@ export function WorkExperience({ experiences }: WorkExperienceProps) {
 
       <div className="flex flex-col gap-4">
         {experiences.map((experience, index) => (
-          <>
-            <Experience key={experience.id} data={experience} />
-            <Experience key={experience.id} data={experience} />
-            <Experience key={experience.id} data={experience} />
-            <Experience key={experience.id} data={experience} />
-            <Experience key={experience.id} data={experience} />
-          </>
+          <Experience key={experience.id} data={experience} />
         ))}
       </div>
     </section>
