@@ -8,6 +8,7 @@ import { Header } from '@/components/header'
 import { CrispChat } from '@/components/crisp-chat'
 
 import { Analytics } from '@vercel/analytics/react'
+import { BackToTop } from '@/components/back-to-top'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <Analytics />
         <CrispChat />
+        <BackToTop />
       </body>
     </html>
   )
