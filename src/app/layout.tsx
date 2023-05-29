@@ -9,6 +9,7 @@ import { CrispChat } from '@/components/crisp-chat'
 
 import { Analytics } from '@vercel/analytics/react'
 import { BackToTop } from '@/components/back-to-top'
+import { Metadata } from 'next'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -20,6 +21,19 @@ const plexMono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Home',
+    template: '%s | Freelancer Digital',
+  },
+
+  icons: [
+    {
+      url: '/favicon.svg',
+    },
+  ],
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

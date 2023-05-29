@@ -30,6 +30,7 @@ export type Project = {
 
   description: {
     raw: RichTextContent
+    text: string
   }
 
   technologies: Technology[]

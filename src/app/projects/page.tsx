@@ -32,11 +32,10 @@ export const metadata = {
 
 export default async function Projects() {
   const { projects } = await getProjectsData()
-  console.log(projects)
+
   return (
     <>
       <ProjectIntro />
-
       <ProjectList projects={projects} />
     </>
   )

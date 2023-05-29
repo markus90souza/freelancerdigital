@@ -20,7 +20,7 @@ export const HighlightProjects = ({ projects }: HighlightProjectsProps) => {
 
       <div>
         {projects.map((project, i) => (
-          <div key={i}>
+          <div key={i} className="flex-1 lg:py-[18px]">
             <HighlightCard project={project} />
             <HorizantalDivider className="my-16" />
           </div>
