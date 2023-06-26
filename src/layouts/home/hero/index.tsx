@@ -59,7 +59,7 @@ export function Hero({ data }: HeroProps) {
               {data.socials.map((contact, index) => (
                 <Link
                   key={index}
-                  href={contact.url}
+                  href={contact.url ?? ''}
                   target="_blank"
                   className="transition-colors hover:text-emerald-400"
                 >

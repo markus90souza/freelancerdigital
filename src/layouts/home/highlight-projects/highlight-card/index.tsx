@@ -40,7 +40,7 @@ export function HighlightCard({ project }: HighlightCardProps) {
           ))}
         </div>
 
-        <Link href={`/projects/${project.slug}`}>
+        <Link href={`/projects/${project.slug}` ?? ''}>
           Ver Projeto <ArrowRight />
         </Link>
       </div>

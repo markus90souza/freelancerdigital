@@ -28,7 +28,7 @@ export const HighlightProjects = ({ projects }: HighlightProjectsProps) => {
 
         <p className="flex items-center gap-1.5">
           <span className="text-gray-400">Se interresou ?</span>
-          <Link href={'/projects'} className="inline-flex">
+          <Link href={'/projects' ?? ''} className="inline-flex">
             Ver todos
             <ArrowRight />
           </Link>
