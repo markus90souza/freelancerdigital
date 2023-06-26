@@ -1,9 +1,12 @@
+'use client'
+
 import { Hero } from '@/layouts/home/hero'
 import { HighlightProjects } from '@/layouts/home/highlight-projects'
 import { KnownTechs } from '@/layouts/home/known-techs'
 import { WorkExperience } from '@/layouts/home/work-experience'
 import { HomePageData } from '@/types/page'
 import { fetchHygraphQuery } from '@/utils/fetch-hygraph-query'
+import { useEffect } from 'react'
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
@@ -63,7 +66,7 @@ const getPageData = async (): Promise<HomePageData> => {
 
   return fetchHygraphQuery(
     query,
-    1000 * 60 * 60 * 24, // 1 day
+    //  1000 * 60 * 60 * 24, // 1 day
   )
 }
 
