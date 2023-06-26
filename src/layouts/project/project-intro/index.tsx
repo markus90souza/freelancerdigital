@@ -4,7 +4,7 @@ import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 export function ProjectIntro() {
   return (
-    <section className="flex h-[450px] w-full flex-col items-center justify-center bg-hero-image bg-cover bg-center bg-no-repeat px-2 lg:h-[630px] ">
+    <section className="bg-hero-image flex h-[450px] w-full flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-2 lg:h-[630px] ">
       <HeadingSection
         subtitle="Projetos"
         title="Meus Projetos"
