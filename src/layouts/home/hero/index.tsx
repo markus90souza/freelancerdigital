@@ -32,7 +32,7 @@ export function Hero({ data }: HeroProps) {
   return (
     <section
       className={
-        'lg:py=[110px] flex w-full flex-col justify-end bg-hero-image bg-cover bg-center bg-no-repeat py-32 pb-10 sm:pb-32 lg:h-[755px]'
+        'lg:py=[110px] bg-hero-image flex w-full flex-col justify-end bg-cover bg-center bg-no-repeat py-32 pb-10 sm:pb-32 lg:h-[755px]'
       }
     >
       <div className="container flex flex-col-reverse items-start justify-between gap-4 lg:flex-row">
@@ -51,7 +51,7 @@ export function Hero({ data }: HeroProps) {
           </div>
 
           <div className="mt-6 flex flex-col items-center sm:flex-row sm:gap-5 lg:mt-10">
-            <Button className="w-max shadow-button" onClick={handleContact}>
+            <Button className="shadow-button w-max" onClick={handleContact}>
               Entre em contato <HiArrowNarrowRight size={18} />
             </Button>
 
