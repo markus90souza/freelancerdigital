@@ -6,7 +6,6 @@ import { KnownTechs } from '@/layouts/home/known-techs'
 import { WorkExperience } from '@/layouts/home/work-experience'
 import { HomePageData } from '@/types/page'
 import { fetchHygraphQuery } from '@/utils/fetch-hygraph-query'
-import { useEffect } from 'react'
 
 const getPageData = async (): Promise<HomePageData> => {
   const query = `
