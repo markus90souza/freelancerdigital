@@ -1,5 +1,3 @@
-'use client'
-
 import { Hero } from '@/layouts/home/hero'
 import { HighlightProjects } from '@/layouts/home/highlight-projects'
 import { KnownTechs } from '@/layouts/home/known-techs'
@@ -75,9 +73,9 @@ const Home = async () => {
   return (
     <>
       <Hero data={pageData} />
-      <KnownTechs techs={pageData.known_techs} />
+      {/* <KnownTechs techs={pageData.known_techs} />
       <HighlightProjects projects={pageData.highlight_projects} />
-      <WorkExperience experiences={workExperiences} />
+      <WorkExperience experiences={workExperiences} /> */}
     </>
   )
 }
