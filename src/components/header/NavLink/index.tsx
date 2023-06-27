@@ -13,7 +13,7 @@ export const NavLink = ({ href, label }: NavLinkProps) => {
   const is_active = pathname === href
   return (
     <Link
-      href={href}
+      href={href ?? ''}
       className={cn(
         'flex items-center gap-2 font-mono font-medium text-gray-400',
         is_active && 'text-emerald-500',
