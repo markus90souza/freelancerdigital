@@ -60,20 +60,20 @@ export default async function Project({ params: { slug } }: ProjectProps) {
   )
 }
 // ssg
-export async function generateStaticParams() {
-  const query = `
-    query ProjectBySlugQuery {
-      projects(first:100) {
-       slug
-      }
-    }
- 
-  `
+// export async function generateStaticParams() {
+//   const query = `
+//     query ProjectBySlugQuery {
+//       projects(first:100) {
+//        slug
+//       }
+//     }
 
-  const { projects } = await fetchHygraphQuery<ProjectPageStaticData>(query)
+//   `
 
-  return projects
-}
+//   const { projects } = await fetchHygraphQuery<ProjectPageStaticData>(query)
+
+//   return projects
+// }
 
 // METADATA
 
@@ -83,7 +83,7 @@ export async function generateMetadata({
   const { project } = await getProjectDetails(slug)
 
   return {
-    title: project.title,
+    title: project.title ?? '',
     description: project.description.text,
 
     openGraph: {
