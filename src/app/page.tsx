@@ -73,9 +73,9 @@ const Home = async () => {
   return (
     <>
       <Hero data={pageData} />
-      {/* <KnownTechs techs={pageData.known_techs} />
+      <KnownTechs techs={pageData.known_techs} />
       <HighlightProjects projects={pageData.highlight_projects} />
-      <WorkExperience experiences={workExperiences} /> */}
+      <WorkExperience experiences={workExperiences} />
     </>
   )
 }
