@@ -71,13 +71,7 @@ export function Hero({ data }: HeroProps) {
           </div>
         </div>
 
-        <Image
-          src={data.profile_picture.url}
-          width={420}
-          height={404}
-          alt=""
-          className="mb-6 h-[300px] w-[300px] rounded-lg object-cover shadow-2xl lg:mb-0 lg:h-[404px] lg:w-[420px]"
-        />
+        <Image src={data.profile_picture.url} width={420} height={404} alt="" />
       </div>
     </section>
   )
