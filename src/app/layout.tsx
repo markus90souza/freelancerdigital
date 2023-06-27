@@ -41,11 +41,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Header />
         {children}
-        {/* <ContactForm />
+        <ContactForm />
         <Footer />
         <Analytics />
         <CrispChat />
-        <BackToTop /> */}
+        <BackToTop />
       </body>
     </html>
   )
