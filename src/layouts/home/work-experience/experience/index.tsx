@@ -5,12 +5,13 @@ import { WorkExperience } from '@/types/work-experiences'
 import { RichText } from '@/components/rich-text'
 import { differenceInMonths, differenceInYears, format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import { FC } from 'react'
 
 type ExperienceProps = {
   data: WorkExperience
 }
 
-export function Experience({ data }: ExperienceProps) {
+export const Experience: FC<ExperienceProps> = ({ data }) => {
   const startDate = new Date(data.start_date)
 
   const formattedStartDate = format(startDate, 'MMM yyyy', { locale: ptBR })
@@ -35,7 +36,7 @@ export function Experience({ data }: ExperienceProps) {
   return (
     <div className="grid grid-cols-[40px,1fr] gap-4 md:gap-10">
       <div className="flex flex-col items-center gap-4">
-        <div className="rounded-full border border-gray-500 p-0.5">
+        <div className="rounded-full border border-green-500 p-0.5">
           <Image
             src={data.company_logo.url}
             width={40}
