@@ -12,14 +12,14 @@ type HighlightCardProps = {
 
 export function HighlightCard({ project }: HighlightCardProps) {
   return (
-    <div className="flex flex-col gap-6 md:flex-row md:gap-12 ">
+    <div className="flex flex-col gap-6 sm:flex-row md:gap-12 ">
       <div className="h-full w-full">
         <Image
           width={420}
           height={304}
           alt=""
           src={project.thumbnail.url}
-          className=" h-[200px] w-full rounded-lg object-cover sm:h-[300px] lg:min-h-full lg:w-[420px]"
+          // className=" h-[200px] w-full rounded-lg object-cover sm:h-[300px] lg:min-h-full lg:w-[420px]"
         />
       </div>
 

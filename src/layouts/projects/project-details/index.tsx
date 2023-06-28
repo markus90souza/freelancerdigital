@@ -19,9 +19,9 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
     <section className="relative flex w-full flex-col items-center justify-end overflow-hidden px-6 py-24 pb-10 sm:min-h-[750px] sm:pb-24 ">
       <div
         className="absolute inset-0 z-[-1]"
-        style={{
-          background: `url(/images/hero-bg.png) no-repeat center/cover, url(${project.page_background.url}) no-repeat center/cover`,
-        }}
+        // style={{
+        //   background: `url(/images/hero-bg.png) no-repeat center/cover, url(${project.page_background.url}) no-repeat center/cover`,
+        // }}
       />
 
       <HeadingSection
